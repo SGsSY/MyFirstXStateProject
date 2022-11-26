@@ -2,7 +2,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-   entry: './index.js',
    output: {
       path: path.join(__dirname, '/bundle'),
       filename: 'bundle.js'
@@ -10,6 +9,9 @@ module.exports = {
    devServer: {
       hot: true,
       port: 8000
+   },
+   resolve: {
+      extensions: ['.js', '.jsx']
    },
    module: {
       rules: [
